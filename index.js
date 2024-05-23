@@ -103,14 +103,6 @@ app.post("/delete-secret", async (req, res) => {
 
     // user inputs
     const userId = req.body.id;
-    const userSecret = req.body.secret;
-    const userScore = req.body.score;
-
-    // body of user input
-    let body = {
-        secret: userSecret,
-        score: userScore,
-    }
 
     try {
     const response = await axios.delete(apiUrl+ `/secrets/${userId}`, config);
